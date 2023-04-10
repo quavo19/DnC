@@ -6,7 +6,7 @@ import BlogCard from "../components/BlogCard";
 //import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
 import Container from "../components/Container";
-import { services } from "../utils/Data";
+import { services, flashsale } from "../utils/Data";
 import '../index.css'
 
 const Home = () => {
@@ -144,7 +144,7 @@ const Home = () => {
                   <h6>Kids</h6>
                   <p>Up to 50% off</p>
                 </div>
-                <img src="images/watch.jpg" alt="camera" />
+                <img src="images/headphone.jpg" alt="camera" />
               </div>
               <div className="category-card d-flex gap align-items-center">
                 <div>
@@ -244,29 +244,32 @@ const Home = () => {
       <Container class1="special-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Special Products</h3>
+            <h3 className="section-heading">Flash Sale</h3>
           </div>
         </div>
         <div className="row">
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct /> 
+        {flashsale?.map((i, j) => {
+                return (
+                  <div className="Hotsale" key={j}>
+                   <SpecialProduct data={i}/>
+                  </div>
+                );
+              })}
         </div>
       </Container>
-      <Container class1="popular-wrapper py-5 home-wrapper-2">
+      {/* <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Our Popular Products</h3>
           </div>
         </div>
         <div className="row">
-          {/* <ProductCard />
           <ProductCard />
           <ProductCard />
-          <ProductCard /> */}
+          <ProductCard />
+          <ProductCard />
         </div>
-      </Container>
+      </Container> */}
       <Container class1="marque-wrapper home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
