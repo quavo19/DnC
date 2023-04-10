@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BlogCard = () => {
   return (
@@ -13,10 +13,10 @@ const BlogCard = () => {
         <p className="desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quaerat
           accusamus officia
-        </p>
-        {/* <Link to="/" className="button">
+        </p> <br></br>
+        <Link to="/" className="home-buy">
           Read More
-        </Link> */}
+        </Link>
       </div>
     </div>
   );
