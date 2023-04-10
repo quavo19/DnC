@@ -568,6 +568,31 @@ color: #ffa167;
   gap: 50px;
 }
 
+.brand {
+  color: #d53703;
+  font-weight: 500;
+  font-size: 15px;
+}
+.red-p{
+  color: red;
+}
+.Hotsale {
+  width: 50%;
+}
+
+.special-width {
+  width: 100%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress {
+  height: 6px;
+}
+
 @media only screen and (max-width: 821px){
   .home-row {
     display: block;
@@ -637,7 +662,9 @@ color: #ffa167;
     width: 60px;
     margin-left: 90px;
   }
-
+  .Hotsale {
+    width: 100%;
+  }
   .category-card {
     box-shadow: 0 0 10px #0000001a;
     padding: 15px;
@@ -653,6 +680,16 @@ color: #ffa167;
   .categories > div:nth-child(4) {
     border-bottom: 1px solid var(--color-ededed);
     border-radius: 9px;
+ }
+
+ .flash-sale {
+  width: 100%;
+ }
+ .special-product-content {
+  width: 50%;
+ }
+ .flash-container {
+  width: 50%;
  }
 
  .col-12 h6 {
