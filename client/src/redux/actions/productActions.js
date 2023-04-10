@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { setProducts, setElectronics, setLoading, setError, setProduct, productReviewed, resetError } from '../slices/products';
+import { setProducts, setElectronics, setLoading, setError, setProduct, productReviewed, resetError, } from '../slices/products';
 
 export const getProducts = () => async (dispatch) => {
   dispatch(setLoading(true));
@@ -42,6 +42,7 @@ export const getElectronics = () => async (dispatch) => {
     );
   }
 };
+
 
 export const getCloths = () => async (dispatch) => {
   dispatch(setLoading(true));
