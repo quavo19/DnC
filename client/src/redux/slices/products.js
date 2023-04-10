@@ -33,6 +33,7 @@ export const productsSlice = createSlice({
       state.error = null;
       state.products = payload;
     },
+    
     setMen: (state, { payload }) => {
       state.loading = false;
       state.error = null;
@@ -91,6 +92,7 @@ export const {
   setCloths,
   setMen,
   setWomen,
+  setSearch,
   setHomeAppliances,
   setHotSale,
   setError,
