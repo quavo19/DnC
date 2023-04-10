@@ -19,6 +19,7 @@ import {
   getwomen,
   getHomeAppliances,
   getHotSale,
+ 
 } from '../redux/actions/productActions';
 import { useEffect } from 'react';
 
@@ -67,7 +68,7 @@ const ProductsScreen = () => {
     <button type='button' onClick={SearchElectronics}>Electonics</button>
     <button type='button' onClick={SearchHomeAppliances}>Home Appliances</button>
     <button type='button' onClick={SearchHotSale}>Hot Sale</button>
-
+    
     <Wrap spacing='30px' justify='center' minHeight='100vh'>
       {loading ? (
         <Stack direction='row' spacing={4}>
