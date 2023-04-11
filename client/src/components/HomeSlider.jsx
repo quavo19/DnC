@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom";
 
 function HomeSlide() {
   return (
@@ -9,10 +10,12 @@ function HomeSlide() {
           src="images/main-banner-1.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+        <div className="main-banner-content position-absolute">
+                <h4>SUPERCHARGED FOR PROS.</h4>
+                <h5>iPad S13+ Pro.</h5>
+                <p>For $999.00</p>
+                <Link to={'/products'} className="home-buy">BUY NOW</Link>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -21,10 +24,12 @@ function HomeSlide() {
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+        <div className="main-banner-content position-absolute">
+                <h4>SUPERCHARGED FOR PROS.</h4>
+                <h5>iPad S13+ Pro.</h5>
+                <p>For $999.00</p>
+                <Link to={'/products'} className="home-buy">BUY NOW</Link>
+        </div>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -33,12 +38,12 @@ function HomeSlide() {
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+        <div className="main-banner-content position-absolute">
+                <h4>SUPERCHARGED FOR PROS.</h4>
+                <h5>iPad S13+ Pro.</h5>
+                <p>for $999.00</p>
+                <Link to={'/products'} className="home-buy">BUY NOW</Link>
+        </div>
       </Carousel.Item>
     </Carousel>
   );

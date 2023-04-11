@@ -25,3 +25,57 @@ export const services = [
         tagline: "just a tagline",
     },
 ]
+
+export const flashsale = [
+    {
+        src: "images/IPhone.jpg",
+        brand: "Apple",
+        title: "Apple Product 13 Pro Max",
+        ReactStars: {
+            count: 5,
+            size: 24,
+            value: 4,
+            edit: false,
+            activeColor: "#ffd700"
+        },
+        price: {
+            originalPrice: 250,
+            sellingPrice: 190
+        },
+        to:'',
+    },
+    {
+        src: "images/IPhone.jpg",
+        brand: "Apple",
+        title: "Apple Product 13 Pro Max",
+        ReactStars: {
+            count: 5,
+            size: 24,
+            value: 4,
+            edit: false,
+            activeColor: "#ffd700"
+        },
+        price: {
+            originalPrice: 250,
+            sellingPrice: 190
+        },
+        to:'',
+    },
+    {
+        src: "images/IPhone.jpg",
+        brand: "Apple",
+        title: "Apple Product 13 Pro Max",
+        ReactStars: {
+            count: 5,
+            size: 24,
+            value: 4,
+            edit: false,
+            activeColor: "#ffd700"
+        },
+        price: {
+            originalPrice: 250,
+            sellingPrice: 190
+        },
+        to:'',
+    },
+]
