@@ -56,7 +56,7 @@ const ProductScreen = () => {
       dispatch(resetProductError());
       setReviewBoxOpen(false);
     }
-  }, [dispatch, id, cart, reviewSend]);
+  }, [dispatch, id, toast, cart, reviewSend]);
 
   const changeAmount = (input) => {
     if (input === 'plus') {
