@@ -6,8 +6,7 @@ dotenv.config();
 
 const protectRoute = asyncHandler(async (req, res, next) => {
   let token;
-  console.log(process.env.TOKEN_SECRET)
-  console.log(token)
+  
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
     try {
       token = req.headers.authorization.split(' ')[1];
