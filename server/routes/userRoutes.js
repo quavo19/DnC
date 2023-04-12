@@ -4,12 +4,14 @@ import Order from '../models/Order.js';
 import asyncHandler from 'express-async-handler';
 import jwt from 'jsonwebtoken';
 import { protectRoute, admin } from '../middleware/authMiddleware.js';
+import dotenv from "dotenv";
+dotenv.config();
 
 const userRoutes = express.Router();
 
 //TODO: redefine expiresIn
 const genToken = (id) => {
-  return jwt.sign({ id }, 'process.env.TOKEN_SECRET', { expiresIn: '60d' });
+  return jwt.sign({ id }, process.env.TOKEN_SECRET, { expiresIn: '60d' });
 };
 
 const loginUser = asyncHandler(async (req, res) => {
