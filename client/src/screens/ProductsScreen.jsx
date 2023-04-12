@@ -1,8 +1,6 @@
 import {
-  Center,
-  Wrap,
-  WrapItem,
   Spinner,
+  Image,
   Stack,
   Alert,
   AlertIcon,
@@ -60,7 +58,7 @@ const ProductsScreen = () => {
 
 
   return (
-    <div>
+    <div className='product-main'>
     <button type='button' onClick={SearchAll}>All</button>
     <button type='button' onClick={SearchCloths}>Cloths</button>
     <button type='button' onClick={SearchWomen}>Women</button>
@@ -69,7 +67,7 @@ const ProductsScreen = () => {
     <button type='button' onClick={SearchHomeAppliances}>Home Appliances</button>
     <button type='button' onClick={SearchHotSale}>Hot Sale</button>
     
-    <Wrap spacing='30px' justify='center' minHeight='100vh'>
+    <ul className="product-flex gap-small">
       {loading ? (
         <Stack direction='row' spacing={4}>
           <Spinner mt={20} thickness='2px' speed='0.65s' emptyColor='gray.200' color='orange.500' size='xl' />
@@ -82,16 +80,17 @@ const ProductsScreen = () => {
         </Alert>
       ) : products.length > 0 ?  (
         products.map((product) => (
-          <WrapItem key={product._id}>
-            <Center w='250px' h='550px'>
+          <li key={product._id}>
+            
               <ProductCard product={product} />
-            </Center>
-          </WrapItem>
+            
+          </li>
         ))
       ) : (
-        <div>This Category is empty</div>
+        <Image p={4} src={'images/empty-cart.jpg'} roundedTop='lg' />
+        
       )}
-    </Wrap>
+    </ul>
     </div>
   );
 };
