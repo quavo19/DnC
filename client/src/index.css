@@ -624,7 +624,9 @@ color: #ffa167;
 .product-price {
   font-size: 15px;
   font-weight: 600;
+  display: flex;
   color: green;
+  align-items: center;
 }
 .product-flex li {
   max-width: 200px;
