@@ -11,7 +11,7 @@ const AdminConsoleScreen = () => {
   const { userInfo } = user;
   const location = useLocation();
 
-  return userInfo && userInfo.isAdmin === 'false' ? (
+  return userInfo && userInfo.isAdmin === 'true' ? (
     <Box p='20px' minH='100vh'>
       <Stack direction={{ base: 'column', lg: 'row' }} align={{ lg: 'flex-start' }}>
         <Stack pr={{ base: 0, md: 14 }} spacing={{ base: 8, md: 10 }} flex='1.5' mb={{ base: 12, md: 'none' }}>
