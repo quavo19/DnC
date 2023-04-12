@@ -7,6 +7,7 @@ import {
   Icon,
   Link,
   HStack,
+  Button,
   useToast,
 } from '@chakra-ui/react';
 import { FiShoppingCart } from 'react-icons/fi';
@@ -86,9 +87,9 @@ const ProductCard = ({ product }) => {
           GHC{Number(product.price).toFixed(2)}
         </h3>
        
-          <button className="cart" variant='ghost' display={'flex'} isDisabled={product.stock <= 0} onClick={() => addItem(product._id)}>
+        <Button variant='ghost' display={'flex'} isDisabled={product.stock <= 0} onClick={() => addItem(product._id)}>
             <Icon as={FiShoppingCart} h={5} w={6} alignSelf={'center'} />
-          </button>
+          </Button>
       
         
       </Flex>
