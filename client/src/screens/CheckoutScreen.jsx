@@ -20,6 +20,7 @@ const CheckoutScreen = () => {
         <Stack spacing={{ base: '8', md: '10' }} flex='1.5' mb={{ base: '12', md: 'none' }}>
           <Heading fontSize='2xl' fontWeight='extrabold'>
             Shipping Information
+            
           </Heading>
           <Stack spacing='6'>
             <ShippingInformation />
