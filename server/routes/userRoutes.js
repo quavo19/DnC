@@ -4,6 +4,8 @@ import Order from '../models/Order.js';
 import asyncHandler from 'express-async-handler';
 import jwt from 'jsonwebtoken';
 import { protectRoute, admin } from '../middleware/authMiddleware.js';
+import dotenv from "dotenv";
+dotenv.config();
 
 const userRoutes = express.Router();
 

@@ -1,14 +1,17 @@
 import jwt from 'jsonwebtoken';
 import asyncHandler from 'express-async-handler';
 import User from '../models/User.js';
+import dotenv from "dotenv";
+dotenv.config();
 
 const protectRoute = asyncHandler(async (req, res, next) => {
   let token;
-
+  
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
     try {
       token = req.headers.authorization.split(' ')[1];
-      const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+      
+      const decoded = jwt.verify(token, 'process.env.TOKEN_SECRET');
 
       req.user = User.findById(decoded.id);
 
@@ -26,7 +29,7 @@ const protectRoute = asyncHandler(async (req, res, next) => {
 });
 
 const admin = (req, res, next) => {
-  if (req.user && req.user.isAdmin !== 'false') {
+  if (req.user && req.user.isAdmin !== 'true') {
     next();
   } else {
     res.status(401);
