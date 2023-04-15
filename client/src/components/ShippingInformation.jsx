@@ -36,9 +36,9 @@ const ShippingInformation = () => {
         <VStack as='form'>
           <FormControl
             onChange={
-              Object.keys(formik.errors).length === 0 && Object.keys(formik.touched).length >= 2
-                ? setErrorState(false, formik.values)
-                : setErrorState(true)
+              
+                setErrorState(false, formik.values)
+               
             }>
             <TextField name='address' placeholder='Street Address' label='Street Address' />
             <Flex>

@@ -121,12 +121,7 @@ const CheckoutOrderSummary = () => {
           </Text>
         </Flex>
       </Stack>
-      <PayPalButton
-        total={total}
-        onPaymentSuccess={onPaymentSuccess}
-        onPaymentError={onPaymentError}
-        disabled={buttonDisabled}
-      />
+      <button type="button" onClick={onPaymentSuccess}> done</button>
       <Box align='center'>
         <Text fontSize='sm'>Have questions? or need help to complete your order?</Text>
         <Flex justifyContent='center' color={mode('orange.500', 'orange.100')}>
