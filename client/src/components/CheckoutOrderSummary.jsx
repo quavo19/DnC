@@ -53,7 +53,9 @@ const CheckoutOrderSummary = () => {
   }, [error, shippingAddress, total, expressShipping, shipping, dispatch]);
 
   const onPaymentSuccess = async (data) => {
-
+console.log(data.paymentSource)
+console.log(cart)
+console.log(shippingAddress)
     dispatch(
       createOrder({
         orderItems: cart,
@@ -69,6 +71,7 @@ const CheckoutOrderSummary = () => {
     dispatch(resetCart());
     navigate('/order-success');
   };
+  
 
   const onPaymentError = (error) => {
     toast({
@@ -121,7 +124,13 @@ const CheckoutOrderSummary = () => {
           </Text>
         </Flex>
       </Stack>
-      <button type="button" onClick={onPaymentSuccess}> done</button>
+      <button type='button' onClick={onPaymentSuccess}> done</button>
+      <PayPalButton
+        total={total}
+        onPaymentSuccess={onPaymentSuccess}
+        onPaymentError={onPaymentError}
+        disabled={buttonDisabled}
+      />
       <Box align='center'>
         <Text fontSize='sm'>Have questions? or need help to complete your order?</Text>
         <Flex justifyContent='center' color={mode('orange.500', 'orange.100')}>
