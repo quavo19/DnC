@@ -98,6 +98,7 @@ console.log(shippingAddress)
           </Text>
           <Text fontWeight='medium' color={colorMode}>
             {subtotal}
+            
           </Text>
         </Flex>
         <Flex justify='space-between'>
