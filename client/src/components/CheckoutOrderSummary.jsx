@@ -78,7 +78,6 @@ console.log(shippingAddress)
       description:
         'Something went wrong during the payment process. Please try again or make sure that your PayPal account balance is enough for this purchase.',
       status: 'error',
-
       duration: '600000',
       isClosable: true,
     });
@@ -98,7 +97,7 @@ console.log(shippingAddress)
           </Text>
           <Text fontWeight='medium' color={colorMode}>
             {subtotal}
-            
+
           </Text>
         </Flex>
         <Flex justify='space-between'>
