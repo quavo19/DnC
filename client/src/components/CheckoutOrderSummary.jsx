@@ -53,7 +53,7 @@ const CheckoutOrderSummary = () => {
   }, [error, shippingAddress, total, expressShipping, shipping, dispatch]);
 
   const onPaymentSuccess = async (data) => {
-console.log(data.paymentSource)
+console.log(data)
 console.log(cart)
 console.log(shippingAddress)
     dispatch(

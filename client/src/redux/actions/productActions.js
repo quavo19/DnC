@@ -1,6 +1,27 @@
 import axios from 'axios';
 
-import { setProducts, setElectronics, setLoading, setError, setProduct, productReviewed, resetError, } from '../slices/products';
+import { setProducts, setAllitems, setElectronics, setLoading, setError, setProduct, productReviewed, resetError, } from '../slices/products';
+export const Search = (value) => async (dispatch) => {
+  
+  try {
+    const { data } = await axios.get('/api/products');
+    const Allitems = data.filter(element => {
+       return element.name.toLowerCase().includes(value.trim().toLowerCase())
+    });
+ 
+    dispatch(setAllitems(Allitems));
+  } catch (error) {
+    dispatch(
+      setError(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+          ? error.message
+          : 'An unexpected error has occured. Please try again later.'
+      )
+    );
+  }
+};
 
 export const getProducts = () => async (dispatch) => {
   dispatch(setLoading(true));

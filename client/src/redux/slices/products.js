@@ -27,33 +27,38 @@ export const productsSlice = createSlice({
       state.error = null;
       state.products = payload;
     },
+    setAllitems: (state, { payload }) => {
+      state.loading = false;
+      state.error = null;
+      state.products = payload;
+    },
 
-    setCloths: (state, { payload }) => {
-      state.loading = false;
-      state.error = null;
-      state.products = payload;
-    },
+    // setCloths: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.error = null;
+    //   state.products = payload;
+    // },
     
-    setMen: (state, { payload }) => {
-      state.loading = false;
-      state.error = null;
-      state.products = payload;
-    },
-    setWomen: (state, { payload }) => {
-      state.loading = false;
-      state.error = null;
-      state.products = payload;
-    },
-    setHomeAppliances: (state, { payload }) => {
-      state.loading = false;
-      state.error = null;
-      state.products = payload;
-    },
-    setHotSale: (state, { payload }) => {
-      state.loading = false;
-      state.error = null;
-      state.products = payload;
-    },
+    // setMen: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.error = null;
+    //   state.products = payload;
+    // },
+    // setWomen: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.error = null;
+    //   state.products = payload;
+    // },
+    // setHomeAppliances: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.error = null;
+    //   state.products = payload;
+    // },
+    // setHotSale: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.error = null;
+    //   state.products = payload;
+    // },
     setProduct: (state, { payload }) => {
       state.product = payload;
       state.loading = false;
@@ -89,11 +94,7 @@ export const productsSlice = createSlice({
 export const {
   setLoading,
   setElectronics,
-  setCloths,
-  setMen,
-  setWomen,
-  setSearch,
-  setHomeAppliances,
+  setAllitems,
   setHotSale,
   setError,
   setProducts,
