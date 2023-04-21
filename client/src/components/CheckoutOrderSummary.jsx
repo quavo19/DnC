@@ -72,7 +72,6 @@ console.log(shippingAddress)
     navigate('/order-success');
   };
   
-
   const onPaymentError = (error) => {
     toast({
       description:
