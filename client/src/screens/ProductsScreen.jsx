@@ -17,7 +17,7 @@ import {
   getwomen,
   getHomeAppliances,
   getHotSale,
- 
+  Search,
 } from '../redux/actions/productActions';
 import { useEffect } from 'react';
 
@@ -30,6 +30,11 @@ const ProductsScreen = () => {
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
+
+  const setName = (e) => {
+    dispatch(Search(e));
+    
+  }
 
   const SearchElectronics = () =>{
     dispatch(getElectronics());
@@ -66,7 +71,7 @@ const ProductsScreen = () => {
     <button type='button' onClick={SearchElectronics}>Electonics</button>
     <button type='button' onClick={SearchHomeAppliances}>Home Appliances</button>
     <button type='button' onClick={SearchHotSale}>Hot Sale</button>
-    
+    <input type="text" onChange={(e) => setName(e.target.value)} />
     <ul className="product-flex gap-small">
       {loading ? (
         <Stack direction='row' spacing={4}>

@@ -53,7 +53,9 @@ const CheckoutOrderSummary = () => {
   }, [error, shippingAddress, total, expressShipping, shipping, dispatch]);
 
   const onPaymentSuccess = async (data) => {
-
+console.log(data)
+console.log(cart)
+console.log(shippingAddress)
     dispatch(
       createOrder({
         orderItems: cart,
@@ -69,13 +71,12 @@ const CheckoutOrderSummary = () => {
     dispatch(resetCart());
     navigate('/order-success');
   };
-
+  
   const onPaymentError = (error) => {
     toast({
       description:
         'Something went wrong during the payment process. Please try again or make sure that your PayPal account balance is enough for this purchase.',
       status: 'error',
-
       duration: '600000',
       isClosable: true,
     });
@@ -95,6 +96,7 @@ const CheckoutOrderSummary = () => {
           </Text>
           <Text fontWeight='medium' color={colorMode}>
             {subtotal}
+
           </Text>
         </Flex>
         <Flex justify='space-between'>
@@ -121,6 +123,7 @@ const CheckoutOrderSummary = () => {
           </Text>
         </Flex>
       </Stack>
+      <button type='button' onClick={onPaymentSuccess}> done</button>
       <PayPalButton
         total={total}
         onPaymentSuccess={onPaymentSuccess}
