@@ -22,7 +22,7 @@ import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { CgProfile } from 'react-icons/cg';
 import { MdLocalShipping, MdLogout, MdOutlineAdminPanelSettings } from 'react-icons/md';
 import { FiShoppingCart } from 'react-icons/fi';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/actions/userActions';
 
@@ -31,10 +31,10 @@ const ShoppingCartIcon = () => {
   const { cart } = cartInfo;
   return (
     <Flex>
-      <Text fontStyle='italic' as='sub' fontSize='md'>
+      <Text fontStyle='italic' color='#fff' as='sub' fontSize='md'>
         {cart.length}
       </Text>
-      <Icon ml='1.5' as={FiShoppingCart} h='7' w='7' alignSelf='center' />
+      <Icon ml='1.5' color='#fff' as={FiShoppingCart} h='7' w='7' alignSelf='center' />
       
     </Flex>
   );
@@ -59,7 +59,7 @@ const NavLink = ({ path, children }) => (
 const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   // const { colorMode, toggleColorMode } = useColorMode();
-  const [isHovering, setIsHovering] = useState(false);
+  // const [isHovering, setIsHovering] = useState(false);
   const user = useSelector((state) => state.user);
   const { userInfo } = user;
   const dispatch = useDispatch();
@@ -83,17 +83,18 @@ const Navbar = () => {
         />
 
         <HStack>
-          <Link
+          {/* <Link
             as={ReactLink}
             to='/'
             style={{ textDecoration: 'none' }}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}>
-            {/* <Flex alignItems='center'>
+              
+            <Flex alignItems='center'>
               
               <Text fontWeight='extrabold'><span className="logo-name">D</span> yahrah</Text>
-            </Flex> */}
-          </Link>
+            </Flex>
+          </Link> */}
           <HStack as='nav' spacing={4} display={{ base: 'none', md: 'flex' }}>
             {links.map((link) => (
               <NavLink key={link.linkName} path={link.path}>
@@ -102,7 +103,9 @@ const Navbar = () => {
             ))}
           </HStack>
         </HStack>
-        <ShoppingCartIcon />
+        <Link as={ReactLink} to='/cart'> 
+          <ShoppingCartIcon />
+        </Link>
         <Flex alignItems='center'>
           {/* <Icon
             cursor='pointer'
