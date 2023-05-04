@@ -60,8 +60,8 @@ console.log(shippingAddress)
       createOrder({
         orderItems: cart,
         shippingAddress,
-        paymentMethod: data.paymentSource,
-        paymentDetails: data,
+        // paymentMethod: data.paymentSource,
+        // paymentDetails: data,
         shippingPrice: shipping(),
         totalPrice: total(),
         userInfo,
