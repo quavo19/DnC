@@ -4,9 +4,6 @@ import Navbar from './components/Navbar';
 import ProductsScreen from './screens/ProductsScreen';
 import CartScreen from './screens/CartScreen';
 import ProductScreen from './screens/ProductScreen';
-import Footer from './components/Footer';
-//import LandingScreen from './screens/LandingScreen';
-import Home from './screens/Home';
 import LoginScreen from './screens/LoginScreen';
 import RegistrationScreen from './screens/RegistrationScreen';
 import ProfileScreen from './screens/ProfileScreen';
@@ -23,8 +20,7 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/products' element={<ProductsScreen />}></Route>
+            <Route path='/' element={<ProductsScreen />}></Route>
             <Route path='/product/:id' element={<ProductScreen />}></Route>
             <Route path='/cart' element={<CartScreen />}></Route>
             <Route path='/login' element={<LoginScreen />} />
@@ -36,7 +32,7 @@ function App() {
             <Route path='/order-success' element={<OrderSuccessScreen />} />
           </Routes>
         </main>
-        <Footer />
+       
       </Router>
     </ChakraProvider>
   );
