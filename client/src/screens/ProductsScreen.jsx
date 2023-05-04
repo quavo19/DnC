@@ -3,6 +3,7 @@ import {
   Image,
   Stack,
   Alert,
+  Container,
   AlertIcon,
   AlertDescription,
   AlertTitle,
@@ -12,14 +13,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { 
   getProducts, 
   getElectronics,
-  getCloths,
   getMen,
-  getwomen,
   getHomeAppliances,
   getHotSale,
   Search,
 } from '../redux/actions/productActions';
+import { Link } from "react-router-dom";
+import HomeSlide from "../components/HomeSlider";
 import { useEffect } from 'react';
+
 
 const ProductsScreen = () => {
   const dispatch = useDispatch();
@@ -44,15 +46,10 @@ const ProductsScreen = () => {
     dispatch(getProducts());
   }
 
-  const SearchCloths = () => {
-    dispatch(getCloths());
-  }
   const SearchMen = () => {
     dispatch(getMen());
   }
-  const SearchWomen = () => {
-    dispatch(getwomen());
-  }
+
   const SearchHomeAppliances = () => {
     dispatch(getHomeAppliances());
   }
@@ -64,14 +61,109 @@ const ProductsScreen = () => {
 
   return (
     <div className='product-main'>
-    <button type='button' onClick={SearchAll}>All</button>
-    <button type='button' onClick={SearchCloths}>Cloths</button>
-    <button type='button' onClick={SearchWomen}>Women</button>
-    <button type='button' onClick={SearchMen}>Men</button>
-    <button type='button' onClick={SearchElectronics}>Electonics</button>
-    <button type='button' onClick={SearchHomeAppliances}>Home Appliances</button>
-    <button type='button' onClick={SearchHotSale}>Hot Sale</button>
-    <input type="text" onChange={(e) => setName(e.target.value)} />
+      <div className="first-sec">
+        <div className="circle"></div>
+        <div className="content">
+            <div className="text-box">
+                <h2>
+                    That's What
+                </h2>
+                <h2><span>i like</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                     Ratione id non ut, quod eaque sed amet placeat inventore odit eius
+                     hic alias saepe omnis dignissimos harum nobis laudantium debitis libero.
+                </p>
+              
+            </div>
+            <div className="img-box">
+                <img src="images/13pm.png" className="pepsi" alt="coverimage"></img>
+            </div>
+        </div>
+        
+        <ul className="sci">
+            <li><Link to='/'><img src="images/facebook.png" alt="facebook icon"></img></Link></li>
+            <li><Link to='/'><img src="images/twitter.png" alt="twitter-icon"></img></Link></li>
+            <li><Link to='/'><img src="images/insta.png" alt="instagram-icon"></img></Link></li>
+        </ul>
+    </div>
+  
+      <Container className="home-wrapper-1 py-5">
+        <div className="home-row row">
+          
+          <div className="slider-col col-6">
+           <HomeSlide />
+          </div>
+          <div className="col-6">
+            <div className="d-flex flex-wrap gap-10 justify-content-between align-items-center">
+              <div className="small-banner position-relative">
+                <img
+                  src="images/catbanner-01.jpg"
+                  className="img-fluid rounded-3"
+                  alt="main banner"
+                />
+                <div className="small-banner-content position-absolute">
+                  <h4>Best Sake</h4>
+                  <h5>iPad Pro.</h5>
+                  <p>
+                     $999.00 
+                  </p>
+                </div>
+              </div>
+              <div className="small-banner position-relative">
+                <img
+                  src="images/catbanner-02.jpg"
+                  className="img-fluid rounded-3"
+                  alt="main banner"
+                />
+                <div className="small-banner-content position-absolute">
+                  <h4>NEW ARRIVAL</h4>
+                  <h5>IPad Air</h5>
+                  <p>
+                    $999.00
+                  </p>
+                </div>
+              </div>
+              <div className="small-banner position-relative ">
+                <img
+                  src="images/catbanner-03.jpg"
+                  className="img-fluid rounded-3"
+                  alt="main banner"
+                />
+                <div className="small-banner-content position-absolute">
+                  <h4>NEW ARRIVAL</h4>
+                  <h5>IPad Air</h5>
+                  <p>
+                    $999.00
+                  </p>
+                </div>
+              </div>
+              <div className="small-banner position-relative ">
+                <img
+                  src="images/catbanner-04.jpg"
+                  className="img-fluid rounded-3"
+                  alt="main banner"
+                />
+                <div className="small-banner-content position-absolute">
+                  <h4>NEW ARRIVAL</h4>
+                  <h5>IPad Air</h5>
+                  <p>
+                    $999.00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    <div className ="sort-products">
+    <button type='button' className='sort badge bg-primary' onClick={SearchAll}>All</button>
+    <button type='button'  className='sort badge bg-primary' onClick={SearchMen}>IPhones</button>
+    <button type='button' className='sort badge bg-primary'  onClick={SearchHomeAppliances}>Apple Accessories</button>
+    <button type='button' className='sort badge bg-primary'  onClick={SearchElectronics}>Mac Books</button>
+    <button type='button'  className='sort badge bg-primary' onClick={SearchHotSale}>Flash Sale</button>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Iphone 13 pro max ... ?" onChange={(e) => setName(e.target.value)} />
+    </form>
     <ul className="product-flex gap-small">
       {loading ? (
         <Stack direction='row' spacing={4}>
@@ -96,6 +188,7 @@ const ProductsScreen = () => {
         
       )}
     </ul>
+    </div>
     </div>
   );
 };
