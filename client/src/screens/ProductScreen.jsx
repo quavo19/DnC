@@ -150,20 +150,20 @@ const ProductScreen = () => {
                     <Flex alignItems='center'>
                       <BiPackage size='20px' />
                       <Text fontWeight='medium' fontSize='sm' ml='2'>
-                        Free shipping if order is above $1000
+                        Free shipping if order is above $10,500
                       </Text>
                     </Flex>
                     <Flex alignItems='center'>
                       <BiCheckShield size='20px' />
                       <Text fontWeight='medium' fontSize='sm' ml='2'>
-                        2 year extended warranty
+                        Secured
                       </Text>
                     </Flex>
 
                     <Flex alignItems='center'>
                       <BiSupport size='20px' />
                       <Text fontWeight='medium' fontSize='sm' ml='2'>
-                        We're here for you 24/7
+                        We're here 24/7
                       </Text>
                     </Flex>
                   </Stack>

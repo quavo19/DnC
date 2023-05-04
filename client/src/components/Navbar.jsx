@@ -10,7 +10,6 @@ import {
   Button,
   Stack,
   useColorModeValue,
-  useColorMode,
   useToast,
   MenuButton,
   MenuDivider,
@@ -19,12 +18,11 @@ import {
   MenuItem,
 } from '@chakra-ui/react';
 import { Link as ReactLink } from 'react-router-dom';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { CgProfile } from 'react-icons/cg';
 import { MdLocalShipping, MdLogout, MdOutlineAdminPanelSettings } from 'react-icons/md';
 import { FiShoppingCart } from 'react-icons/fi';
-import { GiTechnoHeart } from 'react-icons/gi';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/actions/userActions';
 
@@ -33,18 +31,17 @@ const ShoppingCartIcon = () => {
   const { cart } = cartInfo;
   return (
     <Flex>
-      <Text fontStyle='italic' as='sub' fontSize='xs'>
+      <Text fontStyle='italic' color='#fff' as='sub' fontSize='md'>
         {cart.length}
       </Text>
-      <Icon ml='-1.5' as={FiShoppingCart} h='4' w='7' alignSelf='center' />
-      Cart
+      <Icon ml='1.5' color='#fff' as={FiShoppingCart} h='7' w='7' alignSelf='center' />
+      
     </Flex>
   );
 };
 
 const links = [
-  { linkName: 'Products', path: '/products' },
-  { linkName: <ShoppingCartIcon />, path: '/cart' },
+  { linkName: 'Home', path: '/' },
 ];
 
 const NavLink = ({ path, children }) => (
@@ -61,8 +58,8 @@ const NavLink = ({ path, children }) => (
 
 const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
-  const [isHovering, setIsHovering] = useState(false);
+  // const { colorMode, toggleColorMode } = useColorMode();
+  // const [isHovering, setIsHovering] = useState(false);
   const user = useSelector((state) => state.user);
   const { userInfo } = user;
   const dispatch = useDispatch();
@@ -74,27 +71,30 @@ const Navbar = () => {
   };
 
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+    <Box px={4} background='#0062be' color='#fff'>
       <Flex h={16} alignItems='center' justifyContent='space-between'>
         <IconButton
-          size='md'
+          size='xl'
+          background='#0062be'
+          color='#fff'
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           display={{ md: 'none' }}
           onClick={isOpen ? onClose : onOpen}
         />
 
         <HStack>
-          <Link
+          {/* <Link
             as={ReactLink}
             to='/'
             style={{ textDecoration: 'none' }}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}>
+              
             <Flex alignItems='center'>
-              <Icon as={GiTechnoHeart} h={6} w={6} color={isHovering ? 'cyan.400' : 'orange.400'} />
-              <Text fontWeight='extrabold'>Tech Lines</Text>
+              
+              <Text fontWeight='extrabold'><span className="logo-name">D</span> yahrah</Text>
             </Flex>
-          </Link>
+          </Link> */}
           <HStack as='nav' spacing={4} display={{ base: 'none', md: 'flex' }}>
             {links.map((link) => (
               <NavLink key={link.linkName} path={link.path}>
@@ -103,20 +103,23 @@ const Navbar = () => {
             ))}
           </HStack>
         </HStack>
+        <Link as={ReactLink} to='/cart'> 
+          <ShoppingCartIcon />
+        </Link>
         <Flex alignItems='center'>
-          <Icon
+          {/* <Icon
             cursor='pointer'
             mr='3'
             as={colorMode === 'light' ? MoonIcon : SunIcon}
             alignSelf='center'
             onClick={() => toggleColorMode()}
-          />
+          /> */}
           {userInfo ? (
             <Menu>
-              <MenuButton px='4' py='2' transition='all 0.3s' as={Button}>
+              <MenuButton px='4' py='2' color='#000' transition='all 0.3s' as={Button}>
                 {userInfo.name} <ChevronDownIcon />
               </MenuButton>
-              <MenuList>
+              <MenuList color='#000'>
                 <MenuItem as={ReactLink} to='/profile'>
                   <CgProfile />
                   <Text ml='2'>Profile</Text>
