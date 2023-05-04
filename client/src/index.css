@@ -32,6 +32,10 @@ code {
   color: #bf4800;
 }
 
+a:hover {
+  color: #93b4d3 !important;
+}
+
 .pepsi {
   animation: breathing 2s ease-in-out infinite;
 }
@@ -47,9 +51,8 @@ code {
     transform: scale(1);
   }
 }
-
-.home-wrapper-1 {
-  display: none;
+.css-vhc7ah {
+  max-width: 99% !important;
 }
 
 /* home page */
@@ -64,7 +67,7 @@ code {
   background-color: #0062be;
   transition: 0.5s;
 }
-.css-onkibi {
+.css-1nam2jh .css-onkibi {
   height: 2em !important;
   width: 2em !important;
 }
