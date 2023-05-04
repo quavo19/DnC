@@ -28,6 +28,9 @@ code {
   --color-777777: #777777;
   --color-1c1c1b: #1c1c1b;
 }
+.logo-name{
+  color: #bf4800;
+}
 .section-heading {
   font-size: 26px;
   line-height: 32px;

@@ -8,6 +8,7 @@ import {
   Text,
   useDisclosure,
   Button,
+  Image,
   Stack,
   useColorModeValue,
   useColorMode,
@@ -74,7 +75,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+    <Box px={4}>
       <Flex h={16} alignItems='center' justifyContent='space-between'>
         <IconButton
           size='md'
@@ -91,8 +92,8 @@ const Navbar = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}>
             <Flex alignItems='center'>
-              <Icon as={GiTechnoHeart} h={6} w={6} color={isHovering ? 'cyan.400' : 'orange.400'} />
-              <Text fontWeight='extrabold'>Tech Lines</Text>
+              
+              <Text fontWeight='extrabold'><span className="logo-name">D</span> yahrah</Text>
             </Flex>
           </Link>
           <HStack as='nav' spacing={4} display={{ base: 'none', md: 'flex' }}>
@@ -104,13 +105,13 @@ const Navbar = () => {
           </HStack>
         </HStack>
         <Flex alignItems='center'>
-          <Icon
+          {/* <Icon
             cursor='pointer'
             mr='3'
             as={colorMode === 'light' ? MoonIcon : SunIcon}
             alignSelf='center'
             onClick={() => toggleColorMode()}
-          />
+          /> */}
           {userInfo ? (
             <Menu>
               <MenuButton px='4' py='2' transition='all 0.3s' as={Button}>
