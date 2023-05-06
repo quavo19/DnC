@@ -156,11 +156,11 @@ const ProductsScreen = () => {
         </div>
       </Container>
     <div className ="sort-products">
-    <button type='button' className='sort badge bg-primary' onClick={SearchAll}>All</button>
-    <button type='button'  className='sort badge bg-primary' onClick={SearchMen}>IPhones</button>
-    <button type='button' className='sort badge bg-primary'  onClick={SearchHomeAppliances}>Apple Accessories</button>
-    <button type='button' className='sort badge bg-primary'  onClick={SearchElectronics}>Mac Books</button>
-    <button type='button'  className='sort badge bg-primary' onClick={SearchHotSale}>Flash Sale</button>
+    <button type='button' className='sort badge' onClick={SearchAll}>All</button>
+    <button type='button'  className='sort badge' onClick={SearchMen}>IPhones</button>
+    <button type='button' className='sort badge'  onClick={SearchHomeAppliances}>Apple Accessories</button>
+    <button type='button' className='sort badge'  onClick={SearchElectronics}>Mac Books</button>
+    <button type='button'  className='sort badge' onClick={SearchHotSale}>Flash Sale</button>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Iphone 13 pro max ... ?" onChange={(e) => setName(e.target.value)} />
     </form>
