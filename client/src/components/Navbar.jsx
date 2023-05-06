@@ -46,8 +46,7 @@ const links = [
 
 const NavLink = ({ path, children }) => (
   <Link
-    as={ReactLink}
-    to={path}
+    as={ReactLink}    to={path}
     px={2}
     py={2}
     rounded='md'
