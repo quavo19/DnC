@@ -76,9 +76,14 @@ a:hover {
   color: black;
   border: 2px solid gray;
   padding: 10px;
-  font-size: 17px;
+  font-size: 14px;
   border-radius: 50px;
   margin: 5px;
+}
+
+.sort:focus {
+  background: #000;
+  color: #fff;
 }
 .form-inline {
   margin: 10px 5px 0 5px;
