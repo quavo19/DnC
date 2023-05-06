@@ -9,7 +9,6 @@ import {
   useDisclosure,
   Button,
   Stack,
-  useColorModeValue,
   useToast,
   MenuButton,
   MenuDivider,
@@ -49,8 +48,7 @@ const NavLink = ({ path, children }) => (
     as={ReactLink}    to={path}
     px={2}
     py={2}
-    rounded='md'
-    _hover={{ textDecoration: 'none', bg: useColorModeValue('gray.200', 'gray.700') }}>
+    rounded='md'>
     {children}
   </Link>
 );
