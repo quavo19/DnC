@@ -87,7 +87,7 @@ const ProductsScreen = () => {
         </ul>
     </div>
   
-      <Container className="home-wrapper-1 py-5">
+      <Container className="home-wrapper-1">
         <div className="home-row row">
           
           <div className="slider-col col-6">
