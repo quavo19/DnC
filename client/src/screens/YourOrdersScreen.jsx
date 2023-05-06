@@ -27,6 +27,7 @@ const YourOrdersScreen = () => {
 
   const user = useSelector((state) => state.user);
   const { loading, error, orders, userInfo } = user;
+  console.log(orders)
   const location = useLocation();
 
   useEffect(() => {
@@ -59,7 +60,7 @@ const YourOrdersScreen = () => {
                   <Th>Order Date</Th>
                   <Th>Paid Total</Th>
                   <Th>Items</Th>
-                  <Th>Print Receipt</Th>
+                  <Th>Status</Th>
                 </Tr>
               </Thead>
               <Tbody>
@@ -79,9 +80,19 @@ const YourOrdersScreen = () => {
                         </UnorderedList>
                       ))}
                     </Td>
+                    {order.isDelivered ?
                     <Td>
-                      <Button variant='outline'>Receipt</Button>
-                    </Td>
+                    <Button style ={{
+                      background: "green",
+                      color: "white"
+                    }} variant='outline'>Delivered</Button>
+                  </Td> : <Td>
+                      <Button style ={{
+                      background: "Red",
+                      color: "white"
+                    }} 
+                      variant='outline'>Not Delivered</Button>
+                    </Td> }
                   </Tr>
                 ))}
               </Tbody>
