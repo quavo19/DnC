@@ -73,6 +73,8 @@ a:hover {
 }
 
 .sort {
+  color: black;
+  border: 2px solid gray;
   padding: 10px;
   font-size: 17px;
   margin: 5px;
