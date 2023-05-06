@@ -1,5 +1,4 @@
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from "react-router-dom";
 
 function HomeSlide() {
   return (
@@ -14,7 +13,8 @@ function HomeSlide() {
                 <h4>SUPERCHARGED FOR PROS.</h4>
                 <h5>iPad S13+ Pro.</h5>
                 <p>For $999.00</p>
-                <Link to={'/products'} className="home-buy">BUY NOW</Link>
+                <a href="#products-sort " className="home-buy">BUY NOW</a>
+                
         </div>
       </Carousel.Item>
       <Carousel.Item>
@@ -28,7 +28,7 @@ function HomeSlide() {
                 <h4>SUPERCHARGED FOR PROS.</h4>
                 <h5>iPad S13+ Pro.</h5>
                 <p>For $999.00</p>
-                <Link to={'/products'} className="home-buy">BUY NOW</Link>
+                <a href="#products-sort " className="home-buy">BUY NOW</a>
         </div>
       </Carousel.Item>
       <Carousel.Item>
@@ -42,7 +42,7 @@ function HomeSlide() {
                 <h4>SUPERCHARGED FOR PROS.</h4>
                 <h5>iPad S13+ Pro.</h5>
                 <p>for $999.00</p>
-                <Link to={'/products'} className="home-buy">BUY NOW</Link>
+                <a href="#products-sort " className="home-buy">BUY NOW</a>
         </div>
       </Carousel.Item>
     </Carousel>

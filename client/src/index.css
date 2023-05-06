@@ -73,9 +73,23 @@ a:hover {
 }
 
 .sort {
+  color: black;
+  border: 2px solid gray;
   padding: 10px;
-  font-size: 17px;
+  font-size: 14px;
+  border-radius: 50px;
   margin: 5px;
+}
+
+.sort-container {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  background: #fff;
+}
+
+.sort:focus {
+  background: #000;
+  color: #fff;
 }
 .form-inline {
   margin: 10px 5px 0 5px;
@@ -89,7 +103,7 @@ a:hover {
   border-radius: 15px;
 }
 .sort-products {
-  height: 100vh;
+  min-height: 100vh;
 }
 .circle {
   position: absolute;
@@ -246,10 +260,6 @@ a {
   font-size: 14px;
   padding: 13px 33px;
   border-radius: 25px;
-}
-.home-buy:hover {
-  background-color: var(--color-febd69);
-  color: #131921;
 }
 
 
