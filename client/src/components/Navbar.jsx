@@ -68,7 +68,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box px={4} background='#0062be' color='#fff'>
+    <Box px={4} className='sticky' background='#0062be' color='#fff'>
       <Flex h={16} alignItems='center' justifyContent='space-between'>
         <IconButton
           size='xl'
