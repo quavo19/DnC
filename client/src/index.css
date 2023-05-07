@@ -103,7 +103,13 @@ a:hover {
   border-radius: 15px;
 }
 .sort-products {
-  min-height: 100vh;
+  height: 100vh;
+}
+.back-totop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1111;
 }
 .circle {
   position: absolute;
@@ -929,6 +935,10 @@ color: #ffa167;
  }
  .flash-container {
   width: 50%;
+ }
+
+ .css-1yftyrt {
+  width: 100%;
  }
 
  .col-12 h6 {
