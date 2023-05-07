@@ -166,6 +166,9 @@ const ProductsScreen = () => {
         <input class="form-control mr-sm-2" type="search" placeholder="Iphone 13 pro max ... ?" onChange={(e) => setName(e.target.value)} />
       </form>
     </div>
+    <button type='button'  className='back-totop badge'>
+      <a href="#products-sort" className='bg-primary sort'> Top</a>
+    </button>
     <ul className="product-flex gap-small">
       {loading ? (
         <Stack direction='row' spacing={4}>
