@@ -40,16 +40,16 @@ const ShippingInformation = () => {
                 ? setErrorState(false, formik.values)
                 : setErrorState(true)
             }>
-            <TextField name='address' placeholder='Street Address' label='Street Address' />
+            <TextField name='address' placeholder='Street Address' required='true' label='Street Address' />
             <Flex>
               <Box flex='1' mr='10'>
-                <TextField name='postalCode' placeholder='Postal Code' label='Postal Code' type='number' />
+                <TextField name='postalCode' placeholder='Postal Code' required='true'  label='Postal Code' type='number' />
               </Box>
               <Box flex='2'>
-                <TextField name='city' placeholder='City' label='City' />
+                <TextField name='city' required='true' placeholder='City' label='City' />
               </Box>
             </Flex>
-            <TextField name='country' placeholder='Country' label='Country' />
+            <TextField name='country' required='true' placeholder='Country' label='Country' />
           </FormControl>
           <Box w='100%' h='180px' pr='5'>
             <Heading fontSize='2xl' fontWeight='extrabold' mb='10'>
