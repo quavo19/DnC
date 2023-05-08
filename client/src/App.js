@@ -11,6 +11,7 @@ import CheckoutScreen from './screens/CheckoutScreen';
 import YourOrdersScreen from './screens/YourOrdersScreen';
 import AdminConsoleScreen from './screens/AdminConsoleScreen';
 import OrderSuccessScreen from './screens/OrderSuccessScreen';
+import SeeOrderList from './screens/SeeOrderList'
 //import HomeSlider from './components/HomeSlider';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/checkout' element={<CheckoutScreen />} />
             <Route path='/your-orders' element={<YourOrdersScreen />} />
+            <Route path='/your-orders/:id' element={<SeeOrderList />} />
             <Route path='/admin-console' element={<AdminConsoleScreen />} />
             <Route path='/order-success' element={<OrderSuccessScreen />} />
           </Routes>

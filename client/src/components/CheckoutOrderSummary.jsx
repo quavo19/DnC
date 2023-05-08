@@ -123,6 +123,7 @@ console.log(shippingAddress)
           </Text>
         </Flex>
       </Stack>
+      
       <button type='button' onClick={onPaymentSuccess}> done</button>
       <PayPalButton
         total={total}
