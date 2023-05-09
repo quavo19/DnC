@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const connectToDatabase = async () => {
   try {
     mongoose.set('strictQuery', false);
-    const connect = await mongoose.connect('mongodb://0.0.0.0:27017/Today', {
+    const connect = await mongoose.connect('mongodb://0.0.0.0:27017/Deyarah', {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });

@@ -13,7 +13,6 @@ const userRoutes = express.Router();
 const genToken = (id) => {
   return jwt.sign({ id }, 'process.env.TOKEN_SECRET', { expiresIn: '60d' });
 };
-
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
