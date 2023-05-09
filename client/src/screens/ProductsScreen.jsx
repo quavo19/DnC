@@ -156,7 +156,7 @@ const ProductsScreen = () => {
         </div>
       </Container>
       <div className="sort-products" id="products-sort">
-        <div className="sort-container sticky-top">
+        <div className="sort-container">
           <button type="button" className="sort badge" onClick={SearchMen}>
             IPhones
           </button>
@@ -180,14 +180,23 @@ const ProductsScreen = () => {
           <button type="button" className="sort badge" onClick={SearchAll}>
             All{" "}
           </button>
-          <form class="form-inline">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Iphone 13 pro max ... ?"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </form>
+        </div>
+        <div className="sort-search sticky-top">
+          <div class="d-flex justify-content-center search-cont">
+            <div class="search">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search..."
+                name=""
+                onChange={(e) => setName(e.target.value)}
+              />{" "}
+              <div class="search-icon">
+                {" "}
+                <i class="fa fa-search"></i>{" "}
+              </div>{" "}
+            </div>
+          </div>
         </div>
         <button type="button" className="back-totop badge">
           <a href="#products-sort" className="bg-primary sort">
