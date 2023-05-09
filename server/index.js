@@ -17,7 +17,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.get("/", (req, res) => {
-  res.send("Server is ready now");
+  res.send("Server is ready");
 });
 app.get("/api/config/paypal", (req, res) =>
   res.send("iyttr76uty76yut86765rtyr65rr765rtyr56r765ryt")
